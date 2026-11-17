@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Аналитика рынка Новосибирска — СОДА</title>
-<meta name="description" content="Аналитика рынка жилья Новосибирска 2026 от трафик-агентства СОДА: 56 слайдов о городе, рынке, конкурентах, регуляторе, покупателе и отделах продаж. Пришлём бесплатно.">
+<meta name="description" content="Аналитика рынка жилья Новосибирска 2026 от трафик-агентства СОДА: 56 слайдов о городе, рынке, конкурентах, регуляторе, покупателе и отделах продаж. Пришлём в подарок.">
 <meta property="og:title" content="Аналитика рынка недвижимости Новосибирска 2026 — СОДА">
-<meta property="og:description" content="PDF на 56 слайдов: город, рынок, конкуренты, регулятор, покупатель и тест 10 отделов продаж. Оставьте контакты — пришлём бесплатно.">
+<meta property="og:description" content="PDF на 56 слайдов: город, рынок, конкуренты, регулятор, покупатель и тест 10 отделов продаж. Оставьте контакты — пришлём в подарок.">
 <meta property="og:image" content="assets/img/hero-nsk.webp">
 <meta name="theme-color" content="#F3F3F3">
 <link rel="preload" href="assets/fonts/manrope-600.woff2" as="font" type="font/woff2" crossorigin>
@@ -209,31 +209,34 @@ section{scroll-margin-top:110px}
 .about-list li::before{content:"";flex:none;width:18px;height:18px;border-radius:4px;background:var(--accent);margin-top:3px}
 .about-list .btn{margin-top:auto;align-self:flex-start}
 
-/* ---------- проекты ---------- */
-.projects{display:grid;gap:10px;grid-template-columns:1fr}
-@media (min-width:700px){.projects{grid-template-columns:repeat(2,1fr)}}
-@media (min-width:1100px){.projects{grid-template-columns:repeat(3,1fr);gap:20px}}
-.proj{background:var(--bg);border-radius:var(--r-card);padding:26px 24px 24px;display:flex;flex-direction:column;gap:12px;min-height:280px}
-.proj-top{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:15px}
-.proj-top .city{display:inline-flex;align-items:center;gap:6px;font-weight:600}
-.proj-top .city svg{width:14px;height:14px}
-.proj-top .seg{color:var(--gray);white-space:nowrap}
-.proj h3{font-size:clamp(26px,2.4vw,32px);line-height:1.15;margin-top:14px}
-.proj .dev{font-size:15px;color:var(--gray);margin-top:-4px}
-.proj .what{font-size:16px;line-height:1.4;color:var(--text-2)}
-.chips{list-style:none;margin:auto 0 0;padding:10px 0 0;display:flex;flex-wrap:wrap;gap:6px}
-.chips li{font-size:14px;background:#fff;border-radius:20px;padding:7px 13px}
-.proj.local{background:var(--accent);color:#fff}
-.proj.local .seg,.proj.local .dev{color:rgba(255,255,255,.6)}
-.proj.local .what{color:rgba(255,255,255,.85)}
-.proj.local .chips li{background:var(--accent-2);color:#fff}
-
 /* ---------- банк креативов ---------- */
 .bank-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
 @media (min-width:1000px){.bank-grid{grid-template-columns:repeat(6,1fr);gap:16px}}
 .bank-grid figure{margin:0;border-radius:16px;overflow:hidden;aspect-ratio:1;background:var(--bg);transition:transform .3s cubic-bezier(.2,.8,.2,1)}
 .bank-grid figure:hover{transform:translateY(-4px)}
 .bank-grid img{width:100%;height:100%;object-fit:cover}
+/* лендинги: браузер + телефон */
+.land-head{text-align:center;margin:56px 0 24px}
+.land-head h3{font-size:clamp(24px,2.6vw,32px);line-height:1.2}
+.land-head h3 span{color:var(--gray)}
+.landings{display:grid;gap:16px;grid-template-columns:1fr}
+@media (min-width:900px){.landings{grid-template-columns:1fr 1fr;gap:20px}}
+.land{display:block;text-decoration:none;background:var(--bg);border-radius:var(--r-card);padding:16px 16px 18px;transition:transform .3s cubic-bezier(.2,.8,.2,1)}
+@media (min-width:900px){.land{padding:24px 24px 22px}}
+.land:hover{transform:translateY(-4px)}
+.shot{position:relative;margin-right:9%;margin-bottom:7%}
+.browser{display:flex;align-items:center;gap:6px;background:#fff;border-radius:14px 14px 0 0;padding:9px 12px;border-bottom:1px solid var(--line)}
+.browser i{flex:none;width:9px;height:9px;border-radius:50%;background:#DADADA}
+.browser span{margin-left:10px;font-size:12px;color:var(--gray);background:var(--bg);border-radius:8px;padding:3px 10px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.shot .desk{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top;border-radius:0 0 14px 14px;box-shadow:0 10px 30px rgba(0,0,0,.08)}
+.shot .phone{position:absolute;right:-9%;bottom:-7%;width:24%;aspect-ratio:390/844;object-fit:cover;object-position:top;border:5px solid #111;border-radius:22px;box-shadow:0 14px 34px rgba(0,0,0,.22);background:#111}
+@media (max-width:600px){.shot .phone{border-width:3px;border-radius:14px}}
+.land-cap{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-top:18px}
+.land-cap b{display:block;font-size:22px;font-weight:600;line-height:1.2}
+.land-cap span{display:block;font-size:15px;color:var(--gray);margin-top:2px}
+.land-cap em{font-style:normal;font-size:15px;display:inline-flex;align-items:center;gap:6px;white-space:nowrap;background:#fff;border-radius:20px;padding:9px 14px}
+.land-cap em svg{width:14px;height:14px}
+@media (max-width:600px){.land-cap em{font-size:0;gap:0;width:40px;height:40px;padding:0;justify-content:center;border-radius:50%}.land-cap em svg{width:16px;height:16px}}
 .bank-note{margin-top:28px;display:flex;justify-content:center}
 .bank-note div{display:inline-flex;align-items:center;gap:10px;background:var(--bg);border-radius:20px;padding:14px 20px;font-size:16px;text-align:left}
 .bank-note svg{flex:none;width:20px;height:20px;color:var(--accent)}
@@ -295,7 +298,7 @@ section{scroll-margin-top:110px}
 
 <!-- ============ ШАБЛОН ФОРМЫ (используется дважды) ============ -->
 <template id="form-tpl">
-  <div class="form-title">Получите аналитику бесплатно</div>
+  <div class="form-title">Получите аналитику в подарок</div>
   <div class="form-sub">PDF на 56 слайдов + банк креативов СОДА</div>
   <form class="lead-form" novalidate>
     <div class="field">
@@ -351,7 +354,7 @@ section{scroll-margin-top:110px}
     <a class="logo" href="#top" aria-label="СОДА — трафик-агентство"><img src="assets/img/soda-logo-dark.png" alt="СОДА — трафик-агентство" width="216" height="26"></a>
     <nav class="nav" aria-label="Разделы">
       <a href="#inside">Что внутри <svg><use href="#i-arrow"/></svg></a>
-      <a href="#projects">Проекты <svg><use href="#i-arrow"/></svg></a>
+      <a href="#bank">Креативы <svg><use href="#i-arrow"/></svg></a>
       <a href="#contacts">Контакты <svg><use href="#i-arrow"/></svg></a>
     </nav>
     <a class="btn btn-accent btn-sm" href="#get"><span>Получить<span class="long"> аналитику</span></span><svg><use href="#i-arrow"/></svg></a>
@@ -446,63 +449,6 @@ section{scroll-margin-top:110px}
   </div>
 </section>
 
-<!-- ============ 5. НАШИ ПРОЕКТЫ ============ -->
-<section class="sec" id="projects">
-  <div class="panel">
-    <div class="inner">
-      <div class="head rv">
-        <span class="badge"><svg><use href="#i-star"/></svg>проекты</span>
-        <h2 class="title">Ведём рекламу застройщиков <span>в пяти городах</span></h2>
-        <p class="sub">С кем работаем, в каком сегменте и какие каналы ведём</p>
-      </div>
-      <div class="projects">
-        <article class="proj local rv">
-          <div class="proj-top"><span class="city"><svg><use href="#i-pin"/></svg>Новосибирск</span><span class="seg">Уже работаем здесь</span></div>
-          <h3>Ясный берег</h3>
-          <div class="dev">Застройщик МЕТА</div>
-          <p class="what">Видеореклама во ВКонтакте: сценарии, озвучка и монтаж роликов под каждый оффер</p>
-          <ul class="chips"><li>VK Реклама</li><li>Видеоролики</li></ul>
-        </article>
-        <article class="proj rv">
-          <div class="proj-top"><span class="city"><svg><use href="#i-pin"/></svg>Самара</span><span class="seg">Бизнес-класс</span></div>
-          <h3>ЗИМ Галерея</h3>
-          <div class="dev">Застройщик Альянс</div>
-          <p class="what">Трофейные квартиры в доме искусств: перформанс-реклама и лендинги под офферы</p>
-          <ul class="chips"><li>Яндекс Директ</li><li>Промостраницы</li><li>Авито</li></ul>
-        </article>
-        <article class="proj rv">
-          <div class="proj-top"><span class="city"><svg><use href="#i-pin"/></svg>Самара</span><span class="seg">Бизнес-класс</span></div>
-          <h3>Баланс Тауэрс</h3>
-          <div class="dev">Застройщик Альянс</div>
-          <p class="what">«Жить выше всех в Самаре»: оффер с ценой, закрытые показы на 37 этаже, лендинги</p>
-          <ul class="chips"><li>Яндекс Директ</li><li>Промостраницы</li><li>Авито</li></ul>
-        </article>
-        <article class="proj rv">
-          <div class="proj-top"><span class="city"><svg><use href="#i-pin"/></svg>Ижевск</span><span class="seg">Мультиканал</span></div>
-          <h3>Город-Парк</h3>
-          <div class="dev">Застройщик ТАЛАН</div>
-          <p class="what">Реклама и ролики: креативы, которые говорят ежемесячным платежом</p>
-          <ul class="chips"><li>Яндекс Директ</li><li>VK Реклама</li><li>Авито</li><li>Видеоролики</li></ul>
-        </article>
-        <article class="proj rv">
-          <div class="proj-top"><span class="city"><svg><use href="#i-pin"/></svg>Ижевск · Казань</span><span class="seg">6 ЖК</span></div>
-          <h3>КОМОССТРОЙ</h3>
-          <div class="dev">«Истории», «Покровский», «Республика», «Паркмаяк», «Унай», «Фермаполис»</div>
-          <p class="what">Реклама во ВКонтакте для линейки проектов, видео по дизайн-системе каждого ЖК</p>
-          <ul class="chips"><li>VK Реклама</li><li>Видеоролики</li></ul>
-        </article>
-        <article class="proj rv">
-          <div class="proj-top"><span class="city"><svg><use href="#i-pin"/></svg>Санкт-Петербург</span><span class="seg">Бизнес-класс</span></div>
-          <h3>Охта Клуб</h3>
-          <div class="dev">Бизнес-класс в Петербурге</div>
-          <p class="what">Лендинг с основным оффером и рекламные кампании с ежемесячной отчётностью</p>
-          <ul class="chips"><li>Лендинг</li><li>Реклама</li><li>Креативы</li></ul>
-        </article>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ============ 6. БАНК КРЕАТИВОВ ============ -->
 <section class="sec" id="bank">
   <div class="panel">
@@ -520,6 +466,25 @@ section{scroll-margin-top:110px}
         <figure><img src="assets/img/cr-balans-37.webp" alt="Баланс Тауэрс: закрытый показ квартир на высоте 37 этажа" loading="lazy"></figure>
         <figure><img src="assets/img/cr-gorod-park.webp" alt="Город-Парк: своя квартира от 17 222 ₽ в месяц" loading="lazy"></figure>
       </div>
+      <div class="land-head rv"><h3>Лендинги <span>под каждый оффер</span></h3></div>
+      <div class="landings">
+        <a class="land rv" href="https://gorod-park-talan.ru/" target="_blank" rel="noopener">
+          <div class="shot">
+            <div class="browser"><i></i><i></i><i></i><span>gorod-park-talan.ru</span></div>
+            <img class="desk" src="assets/img/ld-gorod-park-d.webp" alt="Лендинг ЖК «Город-Парк», первый экран" loading="lazy">
+            <img class="phone" src="assets/img/ld-gorod-park-m.webp" alt="Лендинг ЖК «Город-Парк» на телефоне" loading="lazy">
+          </div>
+          <div class="land-cap"><div><b>Город-Парк</b><span>ТАЛАН · Ижевск</span></div><em>Открыть сайт <svg><use href="#i-arrow"/></svg></em></div>
+        </a>
+        <a class="land rv" href="https://promo-yasnybereg.ru/" target="_blank" rel="noopener">
+          <div class="shot">
+            <div class="browser"><i></i><i></i><i></i><span>promo-yasnybereg.ru</span></div>
+            <img class="desk" src="assets/img/ld-yasny-bereg-d.webp" alt="Лендинг ЖК «Ясный берег», первый экран" loading="lazy">
+            <img class="phone" src="assets/img/ld-yasny-bereg-m.webp" alt="Лендинг ЖК «Ясный берег» на телефоне" loading="lazy">
+          </div>
+          <div class="land-cap"><div><b>Ясный берег</b><span>МЕТА · Новосибирск</span></div><em>Открыть сайт <svg><use href="#i-arrow"/></svg></em></div>
+        </a>
+      </div>
       <div class="bank-note rv"><div><svg><use href="#i-gift"/></svg>Ссылку на банк креативов пришлём вместе с аналитикой</div></div>
     </div>
   </div>
@@ -530,7 +495,7 @@ section{scroll-margin-top:110px}
   <div class="panel green">
     <div class="inner final">
       <div class="rv">
-        <span class="badge"><svg><use href="#i-star"/></svg>аналитика бесплатно</span>
+        <span class="badge"><svg><use href="#i-star"/></svg>аналитика в подарок</span>
         <h2>Получите аналитику Новосибирска <span>прямо сейчас</span></h2>
         <p class="sub">Оставьте контакты и выберите, куда прислать — PDF и банк креативов придут в течение рабочего дня.</p>
       </div>
@@ -569,7 +534,7 @@ section{scroll-margin-top:110px}
   </div>
 </footer>
 
-<div class="sticky" id="sticky"><a class="btn btn-accent" href="#get">Получить аналитику бесплатно <svg><use href="#i-arrow"/></svg></a></div>
+<div class="sticky" id="sticky"><a class="btn btn-accent" href="#get">Получить аналитику в подарок <svg><use href="#i-arrow"/></svg></a></div>
 <div class="demo" id="demo"><button type="button" aria-label="Скрыть">×</button><b>Демо-режим формы.</b> Заявки никуда не отправляются — укажите адрес приёма в <code>CONFIG.endpoint</code> внизу файла.</div>
 
 <script>
