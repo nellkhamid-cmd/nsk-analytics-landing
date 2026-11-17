@@ -221,22 +221,17 @@ section{scroll-margin-top:110px}
 .land-head h3 span{color:var(--gray)}
 .landings{display:grid;gap:16px;grid-template-columns:1fr}
 @media (min-width:900px){.landings{grid-template-columns:1fr 1fr;gap:20px}}
-.land{display:block;text-decoration:none;background:var(--bg);border-radius:var(--r-card);padding:16px 16px 18px;transition:transform .3s cubic-bezier(.2,.8,.2,1)}
+.land{background:var(--bg);border-radius:var(--r-card);padding:16px 16px 18px}
 @media (min-width:900px){.land{padding:24px 24px 22px}}
-.land:hover{transform:translateY(-4px)}
 .shot{position:relative;margin-right:9%;margin-bottom:7%}
 .browser{display:flex;align-items:center;gap:6px;background:#fff;border-radius:14px 14px 0 0;padding:9px 12px;border-bottom:1px solid var(--line)}
 .browser i{flex:none;width:9px;height:9px;border-radius:50%;background:#DADADA}
-.browser span{margin-left:10px;font-size:12px;color:var(--gray);background:var(--bg);border-radius:8px;padding:3px 10px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .shot .desk{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top;border-radius:0 0 14px 14px;box-shadow:0 10px 30px rgba(0,0,0,.08)}
 .shot .phone{position:absolute;right:-9%;bottom:-7%;width:24%;aspect-ratio:390/844;object-fit:cover;object-position:top;border:5px solid #111;border-radius:22px;box-shadow:0 14px 34px rgba(0,0,0,.22);background:#111}
 @media (max-width:600px){.shot .phone{border-width:3px;border-radius:14px}}
-.land-cap{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-top:18px}
+.land-cap{margin-top:18px}
 .land-cap b{display:block;font-size:22px;font-weight:600;line-height:1.2}
 .land-cap span{display:block;font-size:15px;color:var(--gray);margin-top:2px}
-.land-cap em{font-style:normal;font-size:15px;display:inline-flex;align-items:center;gap:6px;white-space:nowrap;background:#fff;border-radius:20px;padding:9px 14px}
-.land-cap em svg{width:14px;height:14px}
-@media (max-width:600px){.land-cap em{font-size:0;gap:0;width:40px;height:40px;padding:0;justify-content:center;border-radius:50%}.land-cap em svg{width:16px;height:16px}}
 .bank-note{margin-top:28px;display:flex;justify-content:center}
 .bank-note div{display:inline-flex;align-items:center;gap:10px;background:var(--bg);border-radius:20px;padding:14px 20px;font-size:16px;text-align:left}
 .bank-note svg{flex:none;width:20px;height:20px;color:var(--accent)}
@@ -312,8 +307,9 @@ section{scroll-margin-top:110px}
       <div class="hint">Нужно 10 цифр после +7</div>
     </div>
     <div class="field">
-      <input name="company" type="text" autocomplete="organization" placeholder=" ">
+      <input name="company" type="text" autocomplete="organization" placeholder=" " required>
       <label>Компания или ЖК</label>
+      <div class="hint">Укажите компанию или ЖК</div>
     </div>
     <fieldset class="channel">
       <legend>Куда прислать аналитику</legend>
@@ -468,22 +464,22 @@ section{scroll-margin-top:110px}
       </div>
       <div class="land-head rv"><h3>Лендинги <span>под каждый оффер</span></h3></div>
       <div class="landings">
-        <a class="land rv" href="https://gorod-park-talan.ru/" target="_blank" rel="noopener">
+        <div class="land rv">
           <div class="shot">
-            <div class="browser"><i></i><i></i><i></i><span>gorod-park-talan.ru</span></div>
+            <div class="browser"><i></i><i></i><i></i></div>
             <img class="desk" src="assets/img/ld-gorod-park-d.webp" alt="Лендинг ЖК «Город-Парк», первый экран" loading="lazy">
             <img class="phone" src="assets/img/ld-gorod-park-m.webp" alt="Лендинг ЖК «Город-Парк» на телефоне" loading="lazy">
           </div>
-          <div class="land-cap"><div><b>Город-Парк</b><span>ТАЛАН · Ижевск</span></div><em>Открыть сайт <svg><use href="#i-arrow"/></svg></em></div>
-        </a>
-        <a class="land rv" href="https://promo-yasnybereg.ru/" target="_blank" rel="noopener">
+          <div class="land-cap"><b>Город-Парк</b><span>ТАЛАН · Ижевск</span></div>
+        </div>
+        <div class="land rv">
           <div class="shot">
-            <div class="browser"><i></i><i></i><i></i><span>promo-yasnybereg.ru</span></div>
+            <div class="browser"><i></i><i></i><i></i></div>
             <img class="desk" src="assets/img/ld-yasny-bereg-d.webp" alt="Лендинг ЖК «Ясный берег», первый экран" loading="lazy">
             <img class="phone" src="assets/img/ld-yasny-bereg-m.webp" alt="Лендинг ЖК «Ясный берег» на телефоне" loading="lazy">
           </div>
-          <div class="land-cap"><div><b>Ясный берег</b><span>МЕТА · Новосибирск</span></div><em>Открыть сайт <svg><use href="#i-arrow"/></svg></em></div>
-        </a>
+          <div class="land-cap"><b>Ясный берег</b><span>МЕТА · Новосибирск</span></div>
+        </div>
       </div>
       <div class="bank-note rv"><div><svg><use href="#i-gift"/></svg>Ссылку на банк креативов пришлём вместе с аналитикой</div></div>
     </div>
@@ -648,6 +644,8 @@ const CONFIG = {
       const name=form.elements.name;
       if(name.value.trim().length<2){ setErr(name); bad=bad||name; }
       if(digits(phone.value).length!==11){ setErr(phone); bad=bad||phone; }
+      const company=form.elements.company;
+      if(company.value.trim().length<2){ setErr(company); bad=bad||company; }
       const wantEmail=form.elements.channel.value==='Почта';
       if(wantEmail && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email.value.trim())){ setErr(email); bad=bad||email; }
       const consent=form.elements.consent;
