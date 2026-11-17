@@ -280,13 +280,38 @@ section{scroll-margin-top:110px}
 .rv.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
 </style>
+
+<!-- Yandex.Metrika counter -->
+<script>
+  /* ▼ НОМЕР СЧЁТЧИКА ЯНДЕКС МЕТРИКИ — вписать вместо null, например 12345678.
+     Пока null — счётчик не загружается, цели только пишутся в консоль браузера. */
+  window.METRIKA_ID = null;
+
+  if (window.METRIKA_ID) {
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();
+    for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(window.METRIKA_ID, "init", {
+      clickmap: true,
+      trackLinks: true,
+      accurateTrackBounce: true,
+      webvisor: true
+    });
+  }
+</script>
+<!-- Для посетителей без JavaScript: раскомментировать и вписать номер счётчика вместо XXXXXXXX
+<noscript><div><img src="https://mc.yandex.ru/watch/XXXXXXXX" style="position:absolute; left:-9999px;" alt=""></div></noscript>
+-->
+<!-- /Yandex.Metrika counter -->
 </head>
 <body>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="i-star" viewBox="0 0 12 12"><path d="M6.003 0 7.023 4.038 10.816 2.318 8.295 5.634 12.005 7.527 7.841 7.623 8.674 11.704 6.003 8.509 3.331 11.704 4.164 7.623 0 7.527 3.71 5.634 1.189 2.318 4.982 4.038Z" fill="currentColor"/></symbol>
   <symbol id="i-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h12M9.5 3.5 14 8l-4.5 4.5"/></symbol>
-  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></symbol>
   <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
   <symbol id="i-gift" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M5 12v8h14v-8M12 8v12M12 8S10.5 3.5 8 4.5 8.5 8 12 8Zm0 0s1.5-4.5 4-3.5S15.5 8 12 8Z"/></symbol>
 </svg>
@@ -327,7 +352,7 @@ section{scroll-margin-top:110px}
     </div>
     <label class="consent">
       <input type="checkbox" name="consent" value="да">
-      <span>Соглашаюсь с <a href="#" class="policy-link" target="_blank" rel="noopener">политикой конфиденциальности</a> и даю <a href="#" class="agreement-link" target="_blank" rel="noopener">согласие на обработку персональных данных</a></span>
+      <span>Соглашаюсь с <a href="https://sodaa.ru/policy" class="policy-link" target="_blank" rel="noopener">политикой конфиденциальности</a> и даю <a href="https://sodaa.ru/agreement" class="agreement-link" target="_blank" rel="noopener">согласие на обработку персональных данных</a></span>
     </label>
     <div class="form-error" role="alert"></div>
     <button class="btn btn-white submit" type="submit">
@@ -516,14 +541,14 @@ section{scroll-margin-top:110px}
           <span>Ответит на вопросы по аналитике и рекламе</span>
         </div>
         <div class="clist">
-          <a class="tg-link" href="#" target="_blank" rel="noopener"><small>Писать сюда</small><strong class="mgr-tg-label">t.me/ya_sodaa</strong></a>
-          <a class="phone-link" href="#"><small>Звонить сюда</small><strong class="mgr-phone-label">+7 (964) 987-09-29</strong></a>
-          <a class="mail-link" href="#"><small>Почта</small><strong class="mgr-mail-label">sales.mgr@sodaa.ru</strong></a>
+          <a class="tg-link" href="https://t.me/ya_sodaa" target="_blank" rel="noopener"><small>Писать сюда</small><strong class="mgr-tg-label">t.me/ya_sodaa</strong></a>
+          <a class="phone-link" href="tel:+79649870929"><small>Звонить сюда</small><strong class="mgr-phone-label">+7 (964) 987-09-29</strong></a>
+          <a class="mail-link" href="mailto:sales.mgr@sodaa.ru"><small>Почта</small><strong class="mgr-mail-label">sales.mgr@sodaa.ru</strong></a>
         </div>
       </div>
       <div class="foot-bottom">
-        <a href="#" class="policy-link" target="_blank" rel="noopener">Политика конфиденциальности</a>
-        <a href="#" class="agreement-link" target="_blank" rel="noopener">Согласие на обработку персональных данных</a>
+        <a href="https://sodaa.ru/policy" class="policy-link" target="_blank" rel="noopener">Политика конфиденциальности</a>
+        <a href="https://sodaa.ru/agreement" class="agreement-link" target="_blank" rel="noopener">Согласие на обработку персональных данных</a>
         <a href="https://sodaa.ru" target="_blank" rel="noopener">sodaa.ru</a>
       </div>
     </div>
@@ -544,7 +569,7 @@ const CONFIG = {
   endpoint: '',
   policyUrl: 'https://sodaa.ru/policy',
   agreementUrl: 'https://sodaa.ru/agreement',
-  metrikaId: null,            // номер счётчика Яндекс Метрики — цель 'lead' при отправке
+  // Номер счётчика Метрики задаётся в <head>: window.METRIKA_ID
   manager: {
     name: 'Александр Якимов',
     telegram: 'ya_sodaa',
@@ -554,9 +579,43 @@ const CONFIG = {
   }
 };
 
+/* =====================================================================
+   ЦЕЛИ ЯНДЕКС МЕТРИКИ
+   В интерфейсе Метрики создать цели типа «JavaScript-событие»
+   с такими идентификаторами:
+     form_fill       — заполнил форму (все обязательные поля заполнены верно)
+     form_submit     — отправил форму
+     click_phone     — клик по номеру телефона
+     click_email     — клик по почте
+     click_telegram  — клик по Telegram
+   ===================================================================== */
+const GOALS = {
+  fill:     'form_fill',
+  submit:   'form_submit',
+  phone:    'click_phone',
+  email:    'click_email',
+  telegram: 'click_telegram'
+};
+function reachGoal(goal, params){
+  try{
+    if(window.METRIKA_ID && typeof window.ym==='function') ym(window.METRIKA_ID, 'reachGoal', goal, params||{});
+  }catch(e){}
+  if(!window.METRIKA_ID) console.info('[Метрика] цель:', goal, params||'');
+}
+
 (function(){
   const M = CONFIG.manager;
   const tgUrl = 'https://t.me/' + M.telegram;
+
+  /* --- цели: клики по контактам (работает для всех ссылок, в т.ч. добавленных позже) --- */
+  document.addEventListener('click', e=>{
+    const a=e.target.closest('a[href]'); if(!a) return;
+    const h=a.getAttribute('href');
+    if(h.startsWith('tel:')) reachGoal(GOALS.phone);
+    else if(h.startsWith('mailto:')) reachGoal(GOALS.email);
+    else if(/^https?:\/\/(t\.me|telegram\.me)\//.test(h)) reachGoal(GOALS.telegram);
+  });
+  let fillSent=false;  // «заполнил форму» — один раз за визит страницы
 
   /* --- мятные полосы первого экрана --- */
   const stripes=document.querySelector('.stripes');
@@ -638,22 +697,31 @@ const CONFIG = {
     function setErr(inp){ wrap(inp).classList.add('err'); }
     function clearErr(inp){ const w=wrap(inp); w&&w.classList.remove('err'); errBox.classList.remove('show'); }
 
+    // проверки обязательных полей (общие для отправки и цели «заполнил форму»)
+    const name=form.elements.name, company=form.elements.company;
+    const wantEmail=()=>form.elements.channel.value==='Почта';
+    const checks=[
+      [name,    ()=>name.value.trim().length>=2],
+      [phone,   ()=>digits(phone.value).length===11],
+      [company, ()=>company.value.trim().length>=2],
+      [email,   ()=>!wantEmail() || /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email.value.trim())]
+    ];
+    const onChange=()=>{
+      if(!fillSent && checks.every(([,ok])=>ok())){ fillSent=true; reachGoal(GOALS.fill,{form:place}); }
+    };
+    form.addEventListener('input',onChange);
+    form.addEventListener('change',onChange);
+
     form.addEventListener('submit', async e=>{
       e.preventDefault();
       let bad=null;
-      const name=form.elements.name;
-      if(name.value.trim().length<2){ setErr(name); bad=bad||name; }
-      if(digits(phone.value).length!==11){ setErr(phone); bad=bad||phone; }
-      const company=form.elements.company;
-      if(company.value.trim().length<2){ setErr(company); bad=bad||company; }
-      const wantEmail=form.elements.channel.value==='Почта';
-      if(wantEmail && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email.value.trim())){ setErr(email); bad=bad||email; }
+      checks.forEach(([inp,ok])=>{ if(!ok()){ setErr(inp); bad=bad||inp; } });
       const consent=form.elements.consent;
       if(!consent.checked){ setErr(consent); if(!bad){ errBox.textContent='Отметьте согласие на обработку персональных данных'; errBox.classList.add('show'); } bad=bad||consent; }
       if(bad){ bad.focus(); return; }
 
       const fd=new FormData(form);
-      if(!wantEmail) fd.delete('email');
+      if(!wantEmail()) fd.delete('email');
       fd.append('form', place==='hero' ? 'Первый экран' : 'Финальный блок');
       fd.append('offer','Аналитика рынка Новосибирск 2026 + банк креативов');
       fd.append('page', location.href);
@@ -669,8 +737,8 @@ const CONFIG = {
           console.warn('[СОДА] CONFIG.endpoint пуст — заявка не отправлена:', Object.fromEntries(fd));
           await new Promise(r=>setTimeout(r,600));
         }
-        if(CONFIG.metrikaId && window.ym) ym(CONFIG.metrikaId,'reachGoal','lead');
         const ch=fd.get('channel');
+        reachGoal(GOALS.submit,{form:place, channel:ch});
         const where={Telegram:'в Telegram',WhatsApp:'в WhatsApp',MAX:'в MAX','Почта':'на '+email.value.trim()}[ch];
         const first=name.value.trim().split(/\s+/)[0];
         const h=first ? first+', спасибо!' : 'Спасибо, заявка принята';
